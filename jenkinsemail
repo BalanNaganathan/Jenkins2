@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/gsathiya91/jenkins-task-2'
+                    url: 'https://github.com/bnaganathan1/jenkins2'
             }
         }
 
@@ -22,7 +22,7 @@ pipeline {
             emailext(
                 subject: "Jenkins Build #${BUILD_NUMBER}",
                 body: "Build Status: ${currentBuild.currentResult}\nCheck console output.",
-                to: "sathiyajayabal06@gmail.com"
+                to: "infobalan@gmail.com"
             )
         }
     }
